@@ -1,0 +1,16 @@
+class Hero:
+    def __init__(self,name,money,inventory):
+        self.name = name
+        self.money = money
+        self.inventory = inventory
+    def money(self,money):
+        print(self.money)
+    def buy(self,name,money):
+        self.inventory.append(name)
+        print(self.inventory)
+        print(self.money)
+
+    
+
+Mikasa = Hero("Mikasa",100, ["Sword"])
+Mikasa.buy({"potato",5,money})
