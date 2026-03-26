@@ -5,12 +5,12 @@ class Hero:
         self.inventory = inventory
     def money(self,money):
         print(self.money)
-    def buy(self,name,money):
+    def buy(self,name):
         self.inventory.append(name)
         print(self.inventory)
         print(self.money)
-
-    
+    def purchase(money):
+        
 
 Mikasa = Hero("Mikasa",100, ["Sword"])
-Mikasa.buy({"potato",5,money})
+Mikasa.buy("potato")
