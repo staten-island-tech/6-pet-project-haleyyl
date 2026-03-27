@@ -18,7 +18,7 @@ class Dog:
     def play(self,play):
         self.__happiness += int(play)
     def show_status(self):
-        print(f"{self.name} is {self.__happiness}")
+        print(f"{self.name} is now at {self.__happiness} % happiness")
 Juno = Dog("Juno",5)
 Juno.play(play=5)
-print(Juno.__dict__)
+Juno.show_status()
