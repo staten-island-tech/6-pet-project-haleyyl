@@ -1,46 +1,42 @@
 class Pet:
-    def __init__(self,name, hunger = 63, happiness = 65, hygiene = 50):
+    def __init__(self,name, hunger = 60, happiness = 65, hygiene = 50, living = True):
         self.name = name
         self.hunger = hunger
         self.happiness = happiness
         self.hygiene = hygiene
-    
-    def play(self):
-        play = input("would you like to play outside?")
-        if play == "yes":
-            print("the pet is now going outside")
-            self.happiness += 20
-            self.hygiene -= 20
-            print(self.hygiene)
+        self.living = living
 
-    def no (self):
-        
-        if self.hunger <= 25:
-            print((f"{self.name} is very hungry"))
-        if self.happiness <= 20:
-            print((f"{self.name} is unhappy"))
-        if self.hygiene <= 30:
-            print((f"{self.name} is stinky"))
-    def yay(self):
-        if self.hunger >= 80:
-            print((f"{self.name} is satisfied with his meal"))
-        if self.happiness >= 80:
-            print((f"{self.name} is very happy"))
-    
+    def show_status(self):
+        print(f"{self.name} has {self.hunger} hunger")
+        print(f"{self.name} has {self.happiness} happiness")
+        print(f"{self.name} has {self.hygiene} hygiene")
+
     def statDec(self):
         self.hunger -= 5
         self.happiness -= 5
         self. cleanliness -= 5
+    
 
-    def showStatus(self):
-        print(("{self.name} is {self.hygiene} % clean, {self.happiness} % happy, {self.hunger} % full"))
+    
+        
 
-class Person:
+
+
+print("welcome to Make a Pet")
+name = input("please enter a name for your pet")
+stats = Pet((name),60,65,50,True)
+pet = Pet(name)
+
+while pet.living == True:
+    input("Here are your stats. What would you like to do today?")
+
+    
+
+''' class Person:
     def __init__(self,my_name,pet):
         self.my_name = my_name
 
-Jen = Pet("Pet")
-Jen.play()
+ '''
 
 
 ''' class Dog:
@@ -55,3 +51,14 @@ Juno = Dog("Juno",5)
 Juno.play(10)
 Juno.show_status()
  '''
+
+'''   def play(self):
+        play = input("would you like to play outside?")
+        if play == "yes":
+            print(self.name "is now going outside")
+            self.happiness += 20
+            self.hunger -= 10
+            self.hygiene -= 20
+        if play == "no":
+            self.happiness -= 10 '''
+
