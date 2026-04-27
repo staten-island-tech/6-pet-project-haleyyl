@@ -67,7 +67,7 @@ class Pet:
 
 print("welcome to Make a Pet.")
 name = input("please enter a name for your pet")
-pet = Pet(name)
+pet = Pet(name,50,50,50)
 
 while pet.living == True:
     Userinput = input("what do you want to do? Clean your pet, play with your pet, feed your pet, let your dog sleep, or ignore your pet")
@@ -92,22 +92,35 @@ while pet.living == True:
         print(f"{name} is {pet.hygiene} percent clean")
     elif "feed" in Userinput:
         pet.feed()
-        print(f"{name} is having fun")
+        print(f"{name} is eating")
         pet.statDec
         pet.warnings()
         pet.maxmin()
         print(f"{name} is {pet.happiness} percent happy")
         print(f"{name} is {pet.hunger} percent full ")
         print(f"{name} is {pet.hygiene} percent clean")
-    elif "play" in Userinput:
-        pet.play()
-        print(f"{name} is having fun")
+    elif "sleep" in Userinput:
+        pet.rest()
+        print(f"{name} is sleeping")
         pet.statDec
         pet.warnings()
         pet.maxmin()
         print(f"{name} is {pet.happiness} percent happy")
         print(f"{name} is {pet.hunger} percent full ")
         print(f"{name} is {pet.hygiene} percent clean")
+    elif "ignore" in Userinput:
+        pet.ignore()
+        print(f"{name} is feeling lonely")
+        pet.statDec
+        pet.warnings()
+        pet.maxmin()
+        print(f"{name} is {pet.happiness} percent happy")
+        print(f"{name} is {pet.hunger} percent full ")
+        print(f"{name} is {pet.hygiene} percent clean")
+    elif "kill" in Userinput:
+        print(f"{name} has died. Thank you for playing the game")
+        break
+    
 
 
     
