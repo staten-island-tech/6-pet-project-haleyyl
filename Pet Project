@@ -27,16 +27,16 @@ class Pet:
             print(f"{self.name} is clean")
     
     def maxmin(self):
-        if self.happiness > 50:
-            self.happiness = 50
+        if self.happiness > 100:
+            self.happiness = 100
         elif self.happiness < 0:
             self.happiness = 0
-        if self.hunger > 50:
-            self.hunger = 50
+        if self.hunger > 100:
+            self.hunger = 100
         elif self.hunger < 0:
             self.hunger = 0
-        if self.hygiene > 50:
-            self.hygiene = 50
+        if self.hygiene > 100:
+            self.hygiene = 100
         elif self.hygiene < 0:
             self.hygiene = 0
 
@@ -138,14 +138,3 @@ Juno = Dog("Juno",5)
 Juno.play(10)
 Juno.show_status()
  '''
-
-
-''' def show_status(self):
-        print(f"{name} has {self.hunger} hunger")
-        print(f"{name} has {self.happiness} happiness")
-        print(f"{name} has {self.hygiene} hygiene")
-
-    def statDec(self):
-        self.hunger -= 5
-        self.happiness -= 5
-        self. cleanliness -= 5 '''
